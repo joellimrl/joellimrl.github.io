@@ -111,7 +111,6 @@ The portfolio currently highlights these projects:
 - **Tic Tac Toe Game** – AI-enhanced tic-tac-toe with animations. [Code](https://github.com/joellimrl/ticTacToeSimple) · [Live](https://joellimrl.github.io/ticTacToeSimple/)
 - **Lucky Draw** – Interactive event raffle with CSV upload & confetti. [Code](https://github.com/joellimrl/luckyDraw) · [Live](https://joellimrl.github.io/luckyDraw/)
 - **Left or Right** – Party decision game for groups. [Code](https://github.com/joellimrl/leftOrRight) · [Live](https://joellimrl.github.io/leftOrRight/)
-- **Cebu Schedule** – JSON-driven travel/schedule visualizer. [Code](https://github.com/joellimrl/cebuSchedule) · [Live](https://joellimrl.github.io/cebuSchedule/)
 - **Unix Clock** – Real-time Unix timestamp viewer & converter. [Code](https://github.com/joellimrl/unixClock) · [Live](https://joellimrl.github.io/unixClock/)
 - **IRAS Helper** – Utility scripts to streamline repetitive IRAS tax form tasks. [Code](https://github.com/joellimrl/irasHelper) · [Live](https://joellimrl.github.io/irasHelper/)
 
