@@ -1,0 +1,460 @@
+{
+  "fetchedAt": "2026-09-15T06:15:50.736754+00:00",
+  "repositories": [
+    {
+      "name": "auditionClone",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2026-09-15T03:44:33Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "sportsCalendar",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2026-09-14T08:51:49Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "parkingCalculator",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2026-08-27T15:11:15Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "webTools",
+      "description": "Simple web app tools",
+      "language": "JavaScript",
+      "pushed_at": "2026-06-13T14:14:50Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "geologicalTimescale",
+      "description": null,
+      "language": "HTML",
+      "pushed_at": "2026-08-11T15:16:13Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "weightTracker",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2026-07-16T09:48:08Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "spendingsReport",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2026-07-02T09:12:27Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "worldCup2026",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2026-07-01T03:49:37Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "joellimrl.github.io",
+      "description": null,
+      "language": "HTML",
+      "pushed_at": "2026-06-09T16:28:21Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "japan2026",
+      "description": null,
+      "language": "HTML",
+      "pushed_at": "2026-06-09T16:16:20Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "hr-dashboard",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2023-01-05T09:10:36Z",
+      "has_pages": false,
+      "private": false,
+      "archived": true,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "joellimrl",
+      "description": null,
+      "language": null,
+      "pushed_at": "2026-05-20T08:33:03Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "ultimateTicTacToe",
+      "description": "Ultimate Tic Tac Toe",
+      "language": "JavaScript",
+      "pushed_at": "2026-05-19T09:18:51Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "irasHelper",
+      "description": null,
+      "language": "JavaScript",
+      "pushed_at": "2025-11-16T08:49:18Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "unixClock",
+      "description": "Simple web page displaying Unix timestamp clock",
+      "language": "JavaScript",
+      "pushed_at": "2025-06-29T17:00:20Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "luckyDraw",
+      "description": "Lucky draw static site",
+      "language": "JavaScript",
+      "pushed_at": "2025-06-19T06:33:30Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "ticTacToeSimple",
+      "description": "Simple TicTacToe app generated by AI",
+      "language": "JavaScript",
+      "pushed_at": "2025-06-17T07:11:36Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "leftOrRight",
+      "description": "Left or Right game for mass parties",
+      "language": "JavaScript",
+      "pushed_at": "2024-10-14T08:00:58Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "chess",
+      "description": "Chess interface",
+      "language": null,
+      "pushed_at": "2022-10-12T11:55:59Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "auto-maple-resources",
+      "description": "Community repository for Auto Maple command books and routines",
+      "language": null,
+      "pushed_at": "2022-06-12T13:01:17Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "auto-maple",
+      "description": "Artificial intelligence software for MapleStory that uses various machine learning and computer vision techniques to navigate challenging in-game environments",
+      "language": null,
+      "pushed_at": "2022-06-12T12:51:21Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "schoolAPI",
+      "description": null,
+      "language": "TypeScript",
+      "pushed_at": "2020-09-21T16:06:49Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "Practicals",
+      "description": "CP1404",
+      "language": "Python",
+      "pushed_at": "2017-09-28T07:41:52Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "mock-twitter",
+      "description": "Mock Twitter with AngularJS",
+      "language": "TypeScript",
+      "pushed_at": "2023-01-06T05:58:33Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "SingTour",
+      "description": null,
+      "language": "Java",
+      "pushed_at": "2018-09-21T07:59:45Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "theadviceshop",
+      "description": "The Advice Shop Website (Example PHP Site for IT@JCU)",
+      "language": "CSS",
+      "pushed_at": "2018-04-26T04:29:20Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "cp2406_farrell8_ch16",
+      "description": "cp2406_farrell8_ch16",
+      "language": "Java",
+      "pushed_at": "2015-11-13T03:57:03Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "cp2406_farrell8_ch15",
+      "description": "cp2406_farrell8_ch15",
+      "language": "Java",
+      "pushed_at": "2015-11-13T03:56:55Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "cp2406_farrell8_ch03",
+      "description": "cp2406_farrell8_ch03",
+      "language": "Java",
+      "pushed_at": "2018-03-23T02:01:24Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "cp2406_farrell8_ch04",
+      "description": "cp2406_farrell8_ch04",
+      "language": "Java",
+      "pushed_at": "2015-11-13T03:50:59Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "cp2406_farrell8_ch02",
+      "description": null,
+      "language": "Java",
+      "pushed_at": "2015-11-13T03:48:09Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "cp2406_farrell8_ch01",
+      "description": "cp2406_farrell8_ch01",
+      "language": "Java",
+      "pushed_at": "2018-03-16T02:24:18Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "Practicals-1",
+      "description": "Practicals for JCU CP1404/CP5632",
+      "language": "Python",
+      "pushed_at": "2017-09-13T06:19:32Z",
+      "has_pages": false,
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "CossiePlay",
+      "description": "CP1406 Assignment 1",
+      "language": "HTML",
+      "pushed_at": "2017-04-17T15:25:44Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    },
+    {
+      "name": "trainingzone",
+      "description": "Training Zone test website repo",
+      "language": "HTML",
+      "pushed_at": "2017-04-10T06:25:52Z",
+      "has_pages": true,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "owner": {
+        "login": "joellimrl"
+      }
+    }
+  ]
+}

@@ -1,117 +1,63 @@
-# Joel Lim - Developer Portfolio
+# Joel Lim — Playground
 
-A modern split-screen GitHub portfolio showcasing projects with dynamic GitHub API integration.
+A personal collection of tools, games, and web experiments. Built with HTML, CSS, and JavaScript and published at [joellimrl.github.io](https://joellimrl.github.io/).
 
-## Features
+## Daily project discovery
 
-🖥️ **Split-Screen Design**
-- Fixed left panel with profile information and skills
-- Scrollable right panel with dynamic project showcase
-- Responsive design that adapts to all screen sizes
-- Smooth transitions and modern card-based layout
+`.github/workflows/pages.yml` runs at **08:17 Asia/Singapore every day** (`00:17 UTC`), on pushes to `main`, and manually from GitHub Actions.
 
-🔄 **Dynamic GitHub Integration**
-- Automatically fetches repositories from GitHub API
-- Real-time project information including creation dates
-- Dynamic tech stack detection from repository languages
-- Configurable project filtering and display options
+The build paginates all public repositories owned by `joellimrl`, selects repositories with GitHub Pages enabled, and excludes this portfolio. It probes their default Pages URLs and follows redirects to obtain the live destination, including configured custom domains. Responding sites become cards automatically; no project list needs editing. Forks and archived repositories remain included. Private and organization-owned repositories are outside this public collection.
 
-🎨 **Modern UI/UX**
-- Clean, professional design with earth-tone color scheme
-- Animated typing effect for tagline
-- Interactive project cards with hover effects
-- Responsive layout optimized for all devices
+- New project with Pages enabled and a working site: appears at the next successful daily build.
+- Disabled Pages, deleted repository, or a site returning 404/410: removed at the next successful build.
+- API errors, timeout, or transient site failure: the workflow fails before deployment and the current published site stays intact.
+- Metadata and URL checks are point-in-time reachability checks, not guarantees of successful builds or ongoing uptime. Sorting uses code updates (`pushed_at`), not deployment time.
 
-♿ **Accessibility First**
-- Full keyboard navigation support
-- Screen reader compatible with ARIA labels
-- Focus indicators and semantic HTML structure
-- Proper contrast ratios and readable typography
+The production browser reads `data/projects.json`, so visitors never call the GitHub API. Refresh reloads the published list; it does not start a build. Browser storage keeps the last successfully loaded collection for temporary network failures. The workflow uses GitHub’s automatically provided token for public repository metadata; no additional secret or token in frontend code is required. Public site probes carry no API authorization.
 
-⚡ **Performance Optimized**
-- Vanilla JavaScript (no frameworks)
-- CSS Grid and Flexbox for efficient layouts
-- Lazy loading for project images
-- Graceful degradation when JavaScript is disabled
+The deploy job selects GitHub Actions as the Pages publishing source if the site still uses a branch. Each successful workflow builds and deploys an artifact directly with `actions/deploy-pages`; it does not create daily commits. GitHub schedules can run late and public-repository scheduled workflows can be disabled after 60 days without repository activity. Use **Actions → Sync projects and deploy Playground → Run workflow** to update on demand or resume after enabling a disabled workflow.
 
-## Structure
+## Local development
 
-```
-/
-├── index.html              # Main HTML document
-├── css/
-│   ├── styles.css         # Main stylesheet
-│   └── responsive.css     # Responsive design breakpoints
-├── js/
-│   ├── main.js           # Core application logic
-│   ├── split-screen.js   # Split-screen layout interactions
-│   ├── github-api.js     # GitHub API integration
-│   └── typing-animation.js # Animated typing effect
-├── images/
-│   ├── profile.jpg       # Profile photo
-│   └── projects/         # Project screenshots
-└── docs/                 # Documentation files
-    └── feature/          # Feature documentation
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-## Key Features
+Open [the homepage](http://127.0.0.1:8765/). No package install is required.
 
-- **Split-Screen Layout**: Fixed sidebar with scrollable content area
-- **GitHub API Integration**: Automatic project fetching from repositories
-- **Dynamic Content**: Real-time repository information and statistics
-- **Responsive Design**: Seamless experience across all device sizes
-- **Modern Interactions**: Smooth animations and intuitive navigation
+With Node.js 24:
 
-## Browser Support
+```sh
+node --test tests/*.test.mjs
+node scripts/sync-projects.mjs
+node scripts/build-site.mjs
+```
 
-- Modern browsers with ES6+ support
-- Progressive enhancement for older browsers
-- Mobile-first responsive design
+The sync only writes `data/projects.json` after complete discovery and checks succeed. The build copies only production assets to `dist/`. Review prototypes, tests, scripts, and documentation are excluded from the deployed artifact. A checked-in manifest supports local previews; daily production manifests live in the deployment artifact.
 
-## GitHub API Integration
+Browser checks require Playwright and Chrome:
 
-The portfolio dynamically fetches project information from GitHub repositories:
+```sh
+node tests/production-browser-check.cjs
+```
 
-- **Automatic Updates**: No manual editing required for new projects
-- **Real-time Data**: Repository creation dates, descriptions, and languages
-- **Smart Filtering**: Configurable filters for repository selection
-- **Fallback Support**: Graceful handling of API rate limits or errors
+The default test address is `http://127.0.0.1:8765/dist`. Set `PREVIEW_URL` to another local build URL if needed. Tests cover filtering, searching visible descriptions, sorting, random-project selection, six viewport sizes, new daily data, and cached failure handling.
 
-### Configuration
+## Files
 
-Projects are automatically fetched based on:
-- Repository activity and updates
-- Configured inclusion/exclusion filters
-- Repository topics and descriptions
-- Public repository status
+- `index.html`: Playground homepage, without prototype navigation.
+- `css/playground.css`: responsive styles and CSS project illustrations.
+- `js/portfolio.mjs`: cards, filters, search, and saved collection handling.
+- `js/manifest.mjs`: shared manifest validation and loading.
+- `scripts/sync-projects.mjs`: public repository discovery and URL checks.
+- `scripts/build-site.mjs`: production artifact assembly.
+- `.github/workflows/pages.yml`: daily sync and Pages deployment.
+- `prototypes/`: the original three design directions, retained for reference.
 
-## Development
+Known project titles, fallback descriptions, and illustrations are optional presentation enhancements in `js/portfolio.mjs`. New repositories receive readable titles and initials automatically. Repository descriptions take precedence. The illustrations are project identities, not screenshots.
 
-The site is built with vanilla HTML, CSS, and JavaScript following modern web standards:
+## References
 
-- Semantic HTML5 elements
-- CSS Custom Properties (CSS Variables)
-- ES6+ JavaScript features with async/await
-- GitHub REST API integration
-- CSS Grid and Flexbox layouts
-- Progressive Web App principles
-
-## Live Demo
-
-Visit the live site: [joellimrl.github.io](https://joellimrl.github.io)
-
----
-
-*Built with ❤️ using vanilla web technologies*
-
-## Featured Projects
-
-The portfolio currently highlights these projects:
-
-- **Tic Tac Toe Game** – AI-enhanced tic-tac-toe with animations. [Code](https://github.com/joellimrl/ticTacToeSimple) · [Live](https://joellimrl.github.io/ticTacToeSimple/)
-- **Lucky Draw** – Interactive event raffle with CSV upload & confetti. [Code](https://github.com/joellimrl/luckyDraw) · [Live](https://joellimrl.github.io/luckyDraw/)
-- **Left or Right** – Party decision game for groups. [Code](https://github.com/joellimrl/leftOrRight) · [Live](https://joellimrl.github.io/leftOrRight/)
-- **Unix Clock** – Real-time Unix timestamp viewer & converter. [Code](https://github.com/joellimrl/unixClock) · [Live](https://joellimrl.github.io/unixClock/)
-- **IRAS Helper** – Utility scripts to streamline repetitive IRAS tax form tasks. [Code](https://github.com/joellimrl/irasHelper) · [Live](https://joellimrl.github.io/irasHelper/)
-
-> Screenshot assets or live demos for projects marked "pending" will be added once published to GitHub Pages.
+- [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [GitHub repository API](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user)
+- [GitHub scheduled workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
