@@ -49,19 +49,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/configure-pages@v5
-      - name: Wait for the existing branch-based Pages deployment
-        if: github.event_name == 'push'
+      - name: Wait for existing branch-based Pages deployments
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           pages_source=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type')
-          if [ "$pages_source" = "workflow" ]; then
-            exit 0
-          fi
           for attempt in {1..36}; do
-            runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$GITHUB_SHA&per_page=100" \
+            runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?per_page=100" \
               --jq '[.workflow_runs[] | select(.path == "dynamic/pages/pages-build-deployment")]')
-            if jq -e 'length > 0 and all(.[]; .status == "completed")' <<< "$runs" > /dev/null; then
+            if jq -e --arg sha "$GITHUB_SHA" --arg event "$GITHUB_EVENT_NAME" --arg source "$pages_source" \
+              'all(.[]; .status == "completed") and ($event != "push" or $source == "workflow" or any(.[]; .head_sha == $sha))' \
+              <<< "$runs" > /dev/null; then
               echo "Branch-based deployment finished; publishing the freshly synced artifact last."
               exit 0
             fi
