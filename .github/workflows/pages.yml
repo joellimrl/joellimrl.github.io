@@ -41,6 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
+      actions: read
       pages: write
       id-token: write
     environment:
@@ -48,6 +49,26 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/configure-pages@v5
+      - name: Wait for the existing branch-based Pages deployment
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pages_source=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type')
+          if [ "$pages_source" = "workflow" ]; then
+            exit 0
+          fi
+          for attempt in {1..36}; do
+            runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$GITHUB_SHA&per_page=100" \
+              --jq '[.workflow_runs[] | select(.path == "dynamic/pages/pages-build-deployment")]')
+            if jq -e 'length > 0 and all(.[]; .status == "completed")' <<< "$runs" > /dev/null; then
+              echo "Branch-based deployment finished; publishing the freshly synced artifact last."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::The branch-based Pages deployment did not finish within three minutes. Re-run this workflow after it completes."
+          exit 1
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

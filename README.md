@@ -15,7 +15,7 @@ The build paginates all public repositories owned by `joellimrl`, selects reposi
 
 The production browser reads `data/projects.json`, so visitors never call the GitHub API. Refresh reloads the published list; it does not start a build. Browser storage keeps the last successfully loaded collection for temporary network failures. The workflow uses GitHub’s automatically provided token for public repository metadata; no additional secret or token in frontend code is required. Public site probes carry no API authorization.
 
-Each successful workflow builds and deploys an artifact directly with `actions/deploy-pages`; it does not create daily commits. GitHub schedules can run late and public-repository scheduled workflows can be disabled after 60 days without repository activity. Use **Actions → Sync projects and deploy Playground → Run workflow** to update on demand or resume after enabling a disabled workflow.
+On code pushes, the workflow waits for GitHub’s existing branch-based Pages deployment to finish, then publishes the freshly generated artifact last. This avoids the older deployment replacing the new project list. Daily and manual runs deploy directly. Each successful workflow builds and deploys an artifact directly with `actions/deploy-pages`; it does not create daily commits. GitHub schedules can run late and public-repository scheduled workflows can be disabled after 60 days without repository activity. Use **Actions → Sync projects and deploy Playground → Run workflow** to update on demand or resume after enabling a disabled workflow.
 
 ## Local development
 
