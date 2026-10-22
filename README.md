@@ -53,8 +53,20 @@ The default test address is `http://127.0.0.1:8765/dist`. Set `PREVIEW_URL` to a
 - `scripts/build-site.mjs`: production artifact assembly.
 - `.github/workflows/pages.yml`: daily sync and Pages deployment.
 - `prototypes/`: the original three design directions, retained for reference.
+- `street-expenses/`: the Street Expenses homepage, privacy policy and shared styles. Included in the production artifact; no JavaScript, analytics or external fonts.
 
 Known project titles, fallback descriptions, and illustrations are optional presentation enhancements in `js/portfolio.mjs`. New repositories receive readable titles and initials automatically. Repository descriptions take precedence. The illustrations are project identities, not screenshots.
+
+## Street Expenses information pages
+
+After publication, the OAuth application links for Google Cloud project `street-expenses` are:
+
+- Homepage: `https://joellimrl.github.io/street-expenses/`
+- Privacy policy: `https://joellimrl.github.io/street-expenses/privacy.html`
+
+Preview the source at `http://127.0.0.1:8765/street-expenses/`, or build and preview the deployed artifact at `http://127.0.0.1:8765/dist/street-expenses/` using the local server above. Both pages work without JavaScript.
+
+The policy distinguishes the current static website from the planned local Gmail connection test and future cloud processing. Update the status and actual data-handling details before enabling a new stage. The contact address is Joel's existing public portfolio contact; the dedicated transaction inbox is not published. Domain verification and OAuth configuration remain separate setup steps.
 
 ## References
 

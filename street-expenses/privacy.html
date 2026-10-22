@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Street Expenses handles website visits and plans to access, use, store and delete Gmail data for personal expense tracking.">
+  <meta name="theme-color" content="#fcf8e9">
+  <title>Privacy policy — Street Expenses</title>
+  <link rel="canonical" href="https://joellimrl.github.io/street-expenses/privacy.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-wrap">
+    <header class="site-header">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">se</span>Street Expenses</a>
+      <nav aria-label="Main navigation"><a href="./">Overview</a><a href="privacy.html" aria-current="page">Privacy policy</a></nav>
+    </header>
+
+    <main id="main">
+      <header class="policy-header">
+        <p class="eyebrow">Your data, explained</p>
+        <h1>Privacy policy.</h1>
+        <p>Street Expenses is a personal expense-tracking project developed and maintained by Joel Lim. This policy covers these information pages and the planned Gmail connection for the owner’s personal use.</p>
+        <p class="policy-meta">Last updated: <time datetime="2026-10-22">22 October 2026</time> · Contact: <a href="mailto:joellimruili@gmail.com">joellimruili@gmail.com</a></p>
+      </header>
+
+      <div class="policy-layout">
+        <nav class="policy-nav" aria-label="Privacy policy sections">
+          <p>On this page</p>
+          <div>
+            <a href="#current-status">01 &nbsp; Current status</a>
+            <a href="#gmail-data">02 &nbsp; Gmail access & data</a>
+            <a href="#data-use">03 &nbsp; How data is used</a>
+            <a href="#storage">04 &nbsp; Storage & providers</a>
+            <a href="#protection">05 &nbsp; Data protection</a>
+            <a href="#deletion">06 &nbsp; Retention & deletion</a>
+            <a href="#website">07 &nbsp; This website</a>
+            <a href="#changes">08 &nbsp; Changes & contact</a>
+          </div>
+        </nav>
+
+        <div class="policy-content">
+          <section id="current-status" aria-labelledby="status-heading">
+            <h2 id="status-heading">01. Current status</h2>
+            <div class="status-note"><p><strong>The Gmail integration is not connected yet.</strong>As of the date above, Street Expenses is in setup. The owner has created a dedicated Gmail inbox and forwarded a sample transaction alert. The importer, expense backend and mobile viewer have not been implemented.</p></div>
+            <p>These public pages provide information only. They do not offer Google sign-in, connect to a mailbox or collect transaction data. The sections below distinguish current website practices from planned data handling for the first Gmail connection test. There is no public account registration.</p>
+          </section>
+
+          <section id="gmail-data" aria-labelledby="gmail-heading">
+            <h2 id="gmail-heading">02. Gmail access & data</h2>
+            <p>The planned connection uses Google OAuth with the owner’s explicit consent and the <code>gmail.readonly</code> permission. This permission can read messages throughout the connected mailbox, even though the project intends to process selected transaction alerts. Email filters do not restrict the permission itself. A dedicated inbox is used to limit the personal mail present in that account.</p>
+            <p>Read-only access does not permit sending, editing or deleting messages, or marking them as read. Street Expenses does not request a Google password, bank credentials or access to a bank account.</p>
+            <p>The connection test is intended to access:</p>
+            <ul>
+              <li>The connected mailbox address and message identifiers used to identify source emails and avoid duplicate imports.</li>
+              <li>Email headers and content, including sender, recipient, subject, dates, and plain-text or HTML bodies. Forwarded messages may contain additional personal information within their text.</li>
+              <li>Transaction details present in an alert, such as amount, currency, merchant, date, transaction reference and masked card or account details.</li>
+              <li>OAuth access and refresh tokens used to maintain the authorized connection, plus import status and error information needed to detect connection problems.</li>
+            </ul>
+            <p>The first test is planned for a small set of transaction alerts. Attachment processing and access to other Google products are outside that test’s scope.</p>
+          </section>
+
+          <section id="data-use" aria-labelledby="use-heading">
+            <h2 id="use-heading">03. How data is used</h2>
+            <p>Google data will be used to read transaction alerts, extract personal expense records, associate records with their source messages, prevent repeated imports, and identify details that need the owner’s review. The owner may inspect their own source messages and test results to check accuracy.</p>
+            <p>Google data will not be sold, used for advertising or credit decisions, or used to train general-purpose AI models. The project does not provide email or expense data to other users. Transfers will be limited to those needed for the disclosed functionality with consent, security purposes, or compliance with applicable law, in accordance with Google’s policy.</p>
+            <p>Street Expenses will follow the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements, for data received from Google APIs.</p>
+          </section>
+
+          <section id="storage" aria-labelledby="storage-heading">
+            <h2 id="storage-heading">04. Storage & service providers</h2>
+            <h3>Current setup</h3>
+            <p>Forwarded emails are stored in the owner’s dedicated Gmail account and handled by Google. No Street Expenses importer or expense database is currently receiving those emails. GitHub Pages hosts these public information pages; mailbox content, transaction records and OAuth tokens are not part of the website.</p>
+            <h3>First connection test</h3>
+            <p>The planned first test runs on the owner’s computer. OAuth credentials, any saved test output and any extracted records will be kept locally, outside the public website and source repository. Email content will be read locally to verify the connection and parsing.</p>
+            <h3>Later cloud processing</h3>
+            <p>A later version may use AWS Lambda for importing, Fly.io for an application API, and MongoDB for private expense storage. Those services are not connected to Gmail for Street Expenses at this stage. Before sending Gmail or expense data to them, this policy will be updated to identify the active providers, data retained, access controls and retention arrangements.</p>
+          </section>
+
+          <section id="protection" aria-labelledby="protection-heading">
+            <h2 id="protection-heading">05. Data protection</h2>
+            <p>The public website contains no Google client secrets, tokens, mailbox content or real transaction records. It has no form for entering credentials or financial information.</p>
+            <p>For the planned local test, authorization will take place through Google’s OAuth flow, and Gmail API connections will use HTTPS. Tokens and saved output will be restricted to the owner’s local environment and excluded from source control, public pages and ordinary diagnostic logs. These are requirements for the test; a cloud storage or security implementation is not being claimed as already operational.</p>
+          </section>
+
+          <section id="deletion" aria-labelledby="deletion-heading">
+            <h2 id="deletion-heading">06. Retention, revocation & deletion</h2>
+            <p>Current forwarded emails remain in Gmail until the owner deletes them under Gmail’s retention rules. The planned read-only importer will not delete or modify those messages.</p>
+            <p>During the first local test, saved message content, extracted test records and authorization tokens will be retained only for that test and removed when it ends, unless the owner explicitly chooses to continue using them for the next stage. There is no deployed expense archive or automatic backup process at this stage. Retention and deletion for a continuing service will be documented before it is enabled.</p>
+            <p>The owner can stop the local test and revoke Street Expenses access at any time from <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revoking access stops future authorized mailbox reads; it does not delete records already saved locally or emails in Gmail. The owner must delete those separately. Locally retained copies and any copies the owner has backed up must also be removed when no longer needed.</p>
+            <p>For privacy or deletion questions, contact <a href="mailto:joellimruili@gmail.com">joellimruili@gmail.com</a>. Do not include passwords, authorization tokens or full bank alerts in a contact email.</p>
+          </section>
+
+          <section id="website" aria-labelledby="website-heading">
+            <h2 id="website-heading">07. This website</h2>
+            <p>These Street Expenses pages use no analytics, advertising scripts, cookies, browser storage, remote fonts or embedded third-party content. The example purchase on the homepage is fictional. Following an external link takes you to that provider’s website, where its own privacy practices apply.</p>
+            <p>GitHub Pages serves the public site and may process technical request information, including IP addresses, for operation and security. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. Sending an email to the contact address also shares the message and your address with the recipient and the email providers involved.</p>
+          </section>
+
+          <section id="changes" aria-labelledby="changes-heading">
+            <h2 id="changes-heading">08. Changes & contact</h2>
+            <p>This policy will be updated as the project develops. Changes to Google data access, purpose, storage or sharing will be disclosed before they take effect, with renewed consent where required. The date at the top identifies the latest revision.</p>
+            <p>Developer and privacy contact: <strong>Joel Lim</strong>, <a href="mailto:joellimruili@gmail.com">joellimruili@gmail.com</a>.</p>
+            <a class="text-link" href="./"><span aria-hidden="true">←</span> Back to Street Expenses</a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>A personal project by <a href="../">Joel Lim</a>.</p>
+      <div><a href="./">Street Expenses</a><a href="mailto:joellimruili@gmail.com">Contact Joel <span aria-hidden="true">↗</span></a></div>
+    </footer>
+  </div>
+</body>
+</html>
