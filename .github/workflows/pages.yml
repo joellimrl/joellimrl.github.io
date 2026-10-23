@@ -26,6 +26,12 @@ jobs:
           node-version: '24'
       - name: Test discovery and manifest handling
         run: node --test tests/*.test.mjs
+      - name: Install Pocket Miles test dependencies
+        working-directory: tools/pocket-miles
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Test Pocket Miles
+        working-directory: tools/pocket-miles
+        run: npm test
       - name: Discover published projects
         env:
           GITHUB_TOKEN: ${{ github.token }}

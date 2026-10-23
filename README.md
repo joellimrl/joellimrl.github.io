@@ -73,3 +73,7 @@ The policy distinguishes the current static website from the planned local Gmail
 - [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 - [GitHub repository API](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user)
 - [GitHub scheduled workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+
+## Pocket Miles
+
+The personal card picker lives at `/pocket-miles/`, with its own home-screen installation, saved wallet and merchant book. It connects to the existing Streetbot backend using an owner-issued scoped device key; no credentials or private wallet data are included in the site. See [setup, local preview, validation and maintenance](tools/pocket-miles/README.md).
